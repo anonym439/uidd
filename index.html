@@ -1,1 +1,50 @@
-My Page2
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<style type="text/css">
+	.body{
+		width: 260px;
+		height: 1000px;
+		background: #fff url(http://d2v8ggac1o0f6z.cloudfront.net/gsc/G5QOBX/25/b3/71/25b37130953043ac8b0422c034dad07d/images/home/u2.jpg?token=e22b323f019f64d5e8bad4742257566e)no-repeat 0 0;
+		margin-left: 40%;
+
+	}
+	.enter{
+		color: white;
+		padding-top: 125%;
+		padding-right: 2%;
+		text-align: right;
+
+	}
+	</style>
+
+    <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+
+    var bgc = $('body');
+    bgc.css('backgroundPosition', '0 0');
+    var bgscroll = function () {
+    var current = parseInt(bgc.css('backgroundPosition').split(' ')[0]);
+    
+    newBgPos = (current - 1) + 'px 0px';
+    
+    bgc.css('backgroundPosition', newBgPos);
+};
+
+
+setInterval(bgscroll, 75);
+});
+
+
+
+	</script>
+
+</head>
+<body>
+	<div class="body">
+    <h3 class="enter">Enter<h3>	
+	</div>
+
+	
+</body>
+</html>
