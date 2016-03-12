@@ -1,49 +1,64 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      style=
+      "background-image:url(https://lh5.googleusercontent.com/RxqdA_GNWr5sJ3aSj08_0Rp62u1rzGj_Omq1PQmfWntWsoF_9oMYAQZDRoC0oDYvq9Q2IA=w1256-h585);
+       background-repeat:no-repeat;
+       background-attachment:fixed;
+       background-size:100% 100%;">
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
-	.body{
-		width: 260px;
-		height: 1000px;
-		background: #fff url(http://d2v8ggac1o0f6z.cloudfront.net/gsc/G5QOBX/25/b3/71/25b37130953043ac8b0422c034dad07d/images/home/u2.jpg?token=e22b323f019f64d5e8bad4742257566e)no-repeat 0 0;
-		margin-left: 40%;
-
+	.title{
+		width: 330px;
+		height: 210px;
+		background: rgba(100%,100%,100%,0.2);
+		border: 0px solid;
+		border-radius: 10px;
+		margin-left: 10%;
+		margin-top: 29%;
+		float: left;
+		text-align: center;
+		color: white;
+		font-family: "Microsoft JhengHei";
+		font-size: 40px
 	}
 	.enter{
+		float: right;
+		width: 120px;
+		height: 70px;
+		margin-top: 40%;
+		margin-right: 2%;
+		background: rgba(100%,100%,100%,0.2);
+		border: 0px solid;
+		border-radius: 10px;
+		text-align: center;
 		color: white;
-		padding-top: 125%;
-		padding-right: 2%;
-		text-align: right;
+		font-size: 25px;
 
 	}
+
 	</style>
-
     <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function () {
+    <script type="text/javascript">
+    function go(){
+    	document.location.href="./index2.html";
+    }
 
-    var bgc = $('body');
-    bgc.css('backgroundPosition', '0 0');
-    var bgscroll = function () {
-    var current = parseInt(bgc.css('backgroundPosition').split(' ')[0]);
-    
-    newBgPos = (current - 1) + 'px 0px';
-    
-    bgc.css('backgroundPosition', newBgPos);
-};
-
-
-setInterval(bgscroll, 75);
-});
-
-
-
-	</script>
+    </script>
 
 </head>
-<body>
-	<div class="body">
-    <h3 class="enter">Enter<h3>	
-	</div>
+<body class="body">
+	
+	<div class="title">
+        <br>
+    	<span> 台南</span><br>
+    	<span>西市場</span>
+    </div>
+    <a href="./index2.html">
+	<div class="enter">
+		<p onclick="go()">進入 >></p>	
+    </div></a>
+    
+	
 
 	
 </body>
