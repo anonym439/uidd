@@ -15,17 +15,43 @@
 		height:30px;
 		}
 	</style>
+	<script>
+		$(function () {
+			$("#dialog").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+						dialogClass: 'no-close success-dialog',
+						background: "#F9F9F9",
+						color: "#222222"
+						});
+						$("#mark1").click(function () {
+							$("#dialog").dialog("open");
+							});
+			
+		});
 	
+	</script>
+
 
 </head>
 <body>
 	<div>
-		<img id = "1" src="http://i.imgur.com/kYUHHCZ.png">
-		<img id = "2" src="http://i.imgur.com/kYUHHCZ.png">
-		<img id = "3" src="http://i.imgur.com/kYUHHCZ.png">
-		<img id = "4" src="http://i.imgur.com/kYUHHCZ.png">
-		<img id = "5" src="http://i.imgur.com/kYUHHCZ.png">
-		<img id = "6" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark1" src="http://i.imgur.com/kYUHHCZ.png">
+		      <div id="dialog" title="test dialog">
+		      <p>just for test</p>
+		      </div>
+		<img id = "mark2" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark3" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark4" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark5" src="http://i.imgur.com/kYUHHCZ.png">
+		<img id = "mark6" src="http://i.imgur.com/kYUHHCZ.png">
 	</div>
 </body>
 </html>
