@@ -33,8 +33,8 @@
 	</style>
 	<script>
 		$(function () {
-			for(int i = 1; i < 10 ; i++)
-			$("#dialog"+1).dialog({
+		
+			$("#dialog1").dialog({
 				autoOpen: false,
 				show: {
 					effect: "blind",
@@ -48,10 +48,27 @@
 					background: "#F9F9F9",
 					color: "#222222"
 			});
-			$("#mark"+1).click(function () {
-				$("#dialog"+1).dialog("open");
+			$("#mark1").click(function () {
+				$("#dialog1").dialog("open");
 			});
-		}
+			$("#dialog2").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+					},
+					hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					dialogClass: 'no-close success-dialog',
+					background: "#F9F9F9",
+					color: "#222222"
+			});
+			$("#mark2").click(function () {
+				$("#dialog2").dialog("open");
+			});
+		
 			
 
 		});
