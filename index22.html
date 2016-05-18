@@ -9,6 +9,7 @@
 <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet"href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
 	<style type="text/css">
 		img{
@@ -74,9 +75,15 @@
 				//		effect: "blind",
 				//		duration: 1000
 				//		},
+				show: “blind",
+				hide: “explode",
 				dialogClass: 'no-close success-dialog',
 				background: "#F9F9F9",
-				color: "#222222"
+				color: "#222222",
+				model:true,
+				title:"test~~",
+				height:auto,
+				width:80%,
 			});
 			$("#mark1").click(function () {
 				$("#dialog1").dialog("open");
