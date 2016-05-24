@@ -103,6 +103,18 @@
 	    }
 	</style>
 	<script>
+	$(window).on("orientationchange",function(){
+		if(window.orientation == 0) // Portrait
+		{
+			alert("請使用橫向顯示！ ");
+		}
+		else // Landscape
+		{
+			$("p").css({"background-color":"pink","font-size":"200%"});
+			
+		}
+		
+	});
 		$(function () {
 		
 			$("#dialog1").dialog({
