@@ -95,11 +95,11 @@
 		.ui-dialog .ui-dialog-titlebar-close {
 		    right: .3em;
 		    top: 50%;
-            width: 21px;
-            margin: -10px 0 0 0;
-	        padding: 1px;
-	        height: 20px;
-	        background-url:"http://i.imgur.com/uoD4xAx.png";
+                    width: 21px;
+                    margin: -10px 0 0 0;
+	            padding: 1px;
+	            height: 20px;
+	            background-url:"http://i.imgur.com/uoD4xAx.png";
 	    }
 	</style>
 	<script>
@@ -129,10 +129,9 @@
 						},
 					modal: true,
 					dialogClass: 'no-close success-dialog',
-					background: "#566C73",
 					height:"auto",
 					width:"80%",
-					color: "#566C73"
+					closeText: 'X'
 			});
 			$("#mark1").click(function () {
 				$("#dialog1").dialog("open");
@@ -147,9 +146,9 @@
 						effect: "blind",
 						duration: 1000
 						},
+					height:"auto",
+					width:"80%",
 					dialogClass: 'no-close success-dialog',
-					background: "#F9F9F9",
-					color: "#222222",
 					closeText: 'X'
 			});
 			$("#mark2").click(function () {
@@ -174,6 +173,7 @@
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 	<div>
+	
 		<img id = "mark1" class="mark1" src="http://i.imgur.com/kYUHHCZ.png">
 		      <div id="dialog1" title="金連五發金行">
 		      <img id = "pic1" src="http://i.imgur.com/f8DCXAZ.jpg">
