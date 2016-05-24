@@ -1,0 +1,124 @@
+<html style=
+      "background-image:url(http://i.imgur.com/btxqJBq.jpg);
+       background-repeat:no-repeat;
+       background-attachment:fixed;
+       background-size:100% 100%;"
+       id = "background">
+
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes" />
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet"href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+
+	<style type="text/css">
+		img{
+		width:5%;
+		height:auto;
+		}
+		#dialog1 p{
+			
+			
+		}
+		#contain{
+			color: #ffffff;
+			margin-top:-20%;
+		}
+		#ui1{
+			margin-top:7%;
+			margin-left: 1%;
+		}
+
+		#pic1{
+			width: 100%;
+			height: auto;
+		}
+		.ui-widget-header,.ui-state-default, ui-button{
+			background:#566C73;
+			border: 0px solid #b9cd6d;
+			color: #FFFFFF;
+			font-weight: bold;
+			display: hidden;
+		}
+		.ui-widget-content{
+			background: #566C73;
+		}
+		.ui-dialog .ui-dialog-titlebar-close {
+		    right: .3em;
+		    top: 50%;
+            width: 21px;
+            margin: -10px 0 0 0;
+	        padding: 1px;
+	        height: 20px;
+	        background-url:"http://i.imgur.com/uoD4xAx.png";
+	    }
+	    .ui-icon-loading{
+	    	display: hidden;
+	    }
+	</style>
+	<script>
+	function msg() {
+    alert("Hello world!");
+    }
+	    var imgId = 1;
+	    var temp = 0;
+	    $(document).ready(
+		function () {
+			$("#addlocation").click(function(e) {
+			     temp = 1;
+			 });
+			console.log("1"+temp);
+			$("#background").click(function(e) {
+			    if(temp == 1){
+			    console.log("2"+temp);
+			  	if(e.pageX >= 100 && e.pageX <= 500){
+			  	    $("#showBlock").append('<img id= "mark' + imgId + '" src="http://i.imgur.com/kYUHHCZ.png" >');
+			  	    $("#mark" + imgId ).css({
+			  		     "position": "absolute", 
+			  		     "top": e.pageY+"px",
+			  		     "left": e.pageX+"px"
+			  	     });
+
+			    $("#showBlock").append('<div id="dialog'+imgId+'" title="new dialog' +imgId+ '"><input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all"><input type="button" value="Click me" id="button" class="button ui-widget-content ui-corner-all"></div>');
+			  	$("#dialog"+imgId).dialog({
+				     autoOpen: true,
+				     show: {
+				    	effect: "blind",
+				    	duration: 1000
+				    	},
+				   	 hide: {
+						effect: "blind",
+						duration: 1000
+						},
+					 modal: true,
+					 dialogClass: 'no-close success-dialog',
+					 height:"auto",
+				     width:"80%"
+				});
+				temp = 0;
+				imgId++;
+			  }//end of range
+			  }//end of if
+		    });//end of click
+		    $("#adddailog").click(function(e) {	
+			    temp = 0;		
+			    for(var i = 1; i <= imgId ; i++){
+			        $("#mark"+i).click(function () {
+				        $("#dialog"+i).dialog("open");
+	     		    });
+			    }//end of for
+		    });
+
+		});
+	</script>
+
+
+</head>
+<body>
+	<div id = "showBlock">
+		<img src="http://i.imgur.com/QoS3ihG.png" id="addlocation">
+		<img src="http://i.imgur.com/FyEViTx.png" id="adddailog">
+</body>
+</html>
